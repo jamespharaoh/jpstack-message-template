@@ -2,14 +2,13 @@ package wbs.services.messagetemplate.logic;
 
 import static wbs.utils.etc.TypeUtils.genericCastUnchecked;
 
-import javax.inject.Provider;
-
 import lombok.NonNull;
 
 import wbs.framework.component.annotations.ClassSingletonDependency;
 import wbs.framework.component.annotations.NormalLifecycleSetup;
 import wbs.framework.component.annotations.PrototypeDependency;
 import wbs.framework.component.annotations.SingletonComponent;
+import wbs.framework.component.manager.ComponentProvider;
 import wbs.framework.data.tools.DataFromXml;
 import wbs.framework.data.tools.DataFromXmlBuilder;
 import wbs.framework.logging.LogContext;
@@ -33,7 +32,7 @@ class MessageTemplateDatabaseLoader {
 	// prototpe depenencies
 
 	@PrototypeDependency
-	Provider <DataFromXmlBuilder> dataFromXmlBuilderProvider;
+	ComponentProvider <DataFromXmlBuilder> dataFromXmlBuilderProvider;
 
 	// state
 
@@ -56,7 +55,8 @@ class MessageTemplateDatabaseLoader {
 		) {
 
 			dataFromXml =
-				dataFromXmlBuilderProvider.get ()
+				dataFromXmlBuilderProvider.provide (
+					taskLogger)
 
 				.registerBuilderClasses (
 					taskLogger,

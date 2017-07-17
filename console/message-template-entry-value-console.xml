@@ -3,7 +3,8 @@
 
 	<console-helper-provider
 		object-name="messageTemplateEntryValue"
-		view-priv="messageTemplateSet.messageTemplateDatabase:manage">
+		view-priv="messageTemplateSet.messageTemplateDatabase:manage"
+		create-priv="messageTemplateDatabase:manage">
 
 		<priv-key
 			name="messageTemplateEntryValue.manage"
@@ -33,9 +34,7 @@
 				form="list"/>
 
 			<object-create-page
-				form="create"
-				create-priv-delegate="messageTemplateDatabase"
-				create-priv-code="manage"/>
+				form="create"/>
 
 		</list>
 
@@ -94,7 +93,16 @@
 			name="summary"
 			object-type="message-template-entry-value"
 			type="read-only"
-			fields-provider="messageTemplateEntryValueSummaryFieldsProvider"/>
+			fields-provider="messageTemplateEntryValueSummaryFieldsProvider">
+
+			<columns>
+
+				<id-field/>
+				<parent-field/>
+
+			</columns>
+
+		</form>
 
 		<form
 			name="settings"

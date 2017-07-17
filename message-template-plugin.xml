@@ -3,7 +3,6 @@
 	package="wbs.services.messagetemplate">
 
 	<plugin-dependencies>
-		<plugin-dependency name="sms-apps-common"/>
 		<plugin-dependency name="platform-scaffold"/>
 	</plugin-dependencies>
 
@@ -28,10 +27,7 @@
 
 	<layer name="console">
 		<component class="console.MessageTemplateDatabaseSettingsCopyFormHelper"/>
-		<component class="console.MessageTemplateEntryValueFieldsProvider"/>
-		<component class="console.MessageTemplateEntryValueSettingsFieldsProvider"/>
-		<component class="console.MessageTemplateEntryValueSummaryFieldsProvider"/>
-		<component class="console.MessageTemplateEntryValueFormFieldDataProvider"/>
+		<component class="console.MessageTemplateEntryValueObjectFieldsProvider"/>
 		<component class="console.MessageTemplateSetSettingsCreateMissingFormActionHelper"/>
 	</layer>
 

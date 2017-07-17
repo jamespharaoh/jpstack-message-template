@@ -4,6 +4,7 @@ import lombok.NonNull;
 
 import wbs.framework.component.annotations.ClassSingletonDependency;
 import wbs.framework.component.annotations.SingletonDependency;
+import wbs.framework.component.config.WbsConfig;
 import wbs.framework.database.NestedTransaction;
 import wbs.framework.database.Transaction;
 import wbs.framework.entity.record.GlobalId;
@@ -80,6 +81,9 @@ class MessageTemplateFixtureProvider
 	@SingletonDependency
 	SliceObjectHelper sliceHelper;
 
+	@SingletonDependency
+	WbsConfig wbsConfig;
+
 	// implementation
 
 	@Override
@@ -104,7 +108,7 @@ class MessageTemplateFixtureProvider
 					menuGroupHelper.findByCodeRequired (
 						transaction,
 						GlobalId.root,
-						"test",
+						wbsConfig.defaultSlice (),
 						"facility"))
 
 				.setCode (
@@ -136,7 +140,7 @@ class MessageTemplateFixtureProvider
 					sliceHelper.findByCodeRequired (
 						transaction,
 						GlobalId.root,
-						"test"))
+						wbsConfig.defaultSlice ()))
 
 				.setCode (
 					"message_template_database")

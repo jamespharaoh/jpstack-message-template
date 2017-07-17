@@ -1,10 +1,11 @@
 package wbs.services.messagetemplate.logic;
 
 import static wbs.utils.etc.NullUtils.isNotNull;
+import static wbs.utils.etc.NullUtils.isNull;
+import static wbs.utils.etc.OptionalUtils.optionalAbsent;
 import static wbs.utils.etc.OptionalUtils.optionalGetRequired;
 import static wbs.utils.etc.OptionalUtils.optionalIsNotPresent;
 import static wbs.utils.etc.OptionalUtils.optionalIsPresent;
-import static wbs.utils.etc.NullUtils.isNull;
 
 import com.google.common.base.Optional;
 
@@ -102,7 +103,7 @@ class MessageTemplateEntryValueHooks
 
 	@Override
 	public
-	void setDynamic (
+	Optional <String> setDynamic (
 			@NonNull Transaction parentTransaction,
 			@NonNull MessageTemplateEntryValueRec entryValue,
 			@NonNull String name,
@@ -316,6 +317,8 @@ class MessageTemplateEntryValueHooks
 					fieldType.getId ());
 
 			}
+
+			return optionalAbsent ();
 
 		}
 

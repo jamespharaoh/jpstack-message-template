@@ -3,7 +3,8 @@
 
 	<console-helper-provider
 		object-name="messageTemplateFieldType"
-		view-priv="messageTemplateEntryType.messageTemplateDatabase:manage">
+		view-priv="messageTemplateEntryType.messageTemplateDatabase:manage"
+		create-priv="messageTemplateDatabase:manage">
 
 		<priv-key
 			name="messageTemplateFieldType.manage"
@@ -33,9 +34,7 @@
 				form="list"/>
 
 			<object-create-page
-				form="create"
-				create-priv-delegate="messageTemplateDatabase"
-				create-priv-code="manage"/>
+				form="create"/>
 
 		</list>
 
