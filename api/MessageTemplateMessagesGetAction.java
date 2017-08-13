@@ -5,9 +5,11 @@ import static wbs.utils.string.StringUtils.hyphenToUnderscore;
 import static wbs.utils.string.StringUtils.joinWithFullStop;
 import static wbs.utils.string.StringUtils.stringFormat;
 import static wbs.utils.string.StringUtils.underscoreToHyphen;
+import static wbs.web.utils.JsonUtils.toJson;
 
 import com.google.common.base.Optional;
 import com.google.common.collect.ImmutableMap;
+import com.google.gson.JsonObject;
 
 import lombok.NonNull;
 
@@ -185,7 +187,9 @@ class MessageTemplateMessagesGetAction
 				new MessageTemplateSetGetSuccess ()
 
 				.messages (
-					messagesBuilder.build ());
+					messagesBuilder.build ())
+
+			;
 
 			return jsonResponderProvider.provide (
 				transaction,
@@ -193,7 +197,9 @@ class MessageTemplateMessagesGetAction
 					jsonResponder
 
 				.value (
-					successResponse)
+					(JsonObject)
+					toJson (
+						successResponse))
 
 			);
 
