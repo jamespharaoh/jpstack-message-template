@@ -1,5 +1,5 @@
 <record
-	name="messageTemplateFieldValue"
+	name="message-template-field-value"
 	type="ephemeral">
 
 	<fields>
@@ -11,10 +11,10 @@
 		<!-- identity -->
 
 		<parent-field
-			type="messageTemplateEntryValue"/>
+			type="message-template-entry-value"/>
 
 		<identity-reference-field
-			type="messageTemplateFieldType"/>
+			type="message-template-field-type"/>
 
 		<!-- details -->
 
@@ -23,7 +23,7 @@
 		<!-- settings -->
 
 		<string-field
-			name="stringValue"/>
+			name="string-value"/>
 
 	</fields>
 

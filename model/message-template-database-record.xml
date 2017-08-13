@@ -1,5 +1,5 @@
 <record
-	name="messageTemplateDatabase"
+	name="message-template-database"
 	type="major">
 
 	<fields>
@@ -26,18 +26,9 @@
 	<collections>
 
 		<children-collection
-			type="messageTemplateEntryType"/>
+			type="message-template-entry-type"/>
 
 	</collections>
-
-	<event-types>
-
-		<event-type
-			name="Message template database copied"
-			text="%0 copied types from %1 to %2"
-			admin="yes"/>
-
-	</event-types>
 
 	<priv-types>
 

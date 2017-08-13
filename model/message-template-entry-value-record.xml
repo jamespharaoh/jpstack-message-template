@@ -1,5 +1,5 @@
 <record
-	name="messageTemplateEntryValue"
+	name="message-template-entry-value"
 	type="minor">
 
 	<fields>
@@ -11,10 +11,10 @@
 		<!-- identity -->
 
 		<parent-field
-			type="messageTemplateSet"/>
+			type="message-template-set"/>
 
 		<identity-reference-field
-			type="messageTemplateEntryType"/>
+			type="message-template-entry-type"/>
 
 		<!-- details -->
 
@@ -26,7 +26,7 @@
 
 		<children-mapping
 			name="fields"
-			type="messageTemplateFieldValue"
+			type="message-template-field-value"
 			map-type="integer"
 			map-column="message_template_field_type_id"/>
 

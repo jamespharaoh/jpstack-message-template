@@ -1,5 +1,5 @@
 <record
-	name="messageTemplateParameter"
+	name="message-template-parameter"
 	type="minor">
 
 	<fields>
@@ -11,7 +11,7 @@
 		<!-- identity -->
 
 		<parent-field
-			type="messageTemplateEntryType"/>
+			type="message-template-entry-type"/>
 
 		<code-field/>
 
@@ -29,7 +29,7 @@
 			name="required"/>
 
 		<integer-field
-			name="maximumLength"
+			name="maximum-length"
 			nullable="yes"/>
 
 	</fields>
