@@ -1,5 +1,5 @@
 <record
-	name="messageTemplateEntryType"
+	name="message-template-entry-type"
 	type="minor">
 
 	<fields>
@@ -11,7 +11,7 @@
 		<!-- identity -->
 
 		<parent-field
-			type="messageTemplateDatabase"/>
+			type="message-template-database"/>
 
 		<code-field/>
 
@@ -26,7 +26,7 @@
 		<!-- statistics -->
 
 		<integer-field
-			name="numFields"
+			name="num-fields"
 			default="0"/>
 
 	</fields>
@@ -34,7 +34,7 @@
 	<collections>
 
 		<children-collection
-			type="messageTemplateFieldType"/>
+			type="message-template-field-type"/>
 
 	</collections>
 

@@ -1,5 +1,5 @@
 <record
-	name="messageTemplateFieldType"
+	name="message-template-field-type"
 	type="minor">
 
 	<fields>
@@ -11,7 +11,7 @@
 		<!-- identity -->
 
 		<parent-field
-			type="messageTemplateEntryType"/>
+			type="message-template-entry-type"/>
 
 		<code-field/>
 
@@ -26,27 +26,27 @@
 		<!-- settings -->
 
 		<string-field
-			name="defaultValue"/>
+			name="default-value"/>
 
 		<string-field
-			name="helpText"/>
+			name="help-text"/>
 
 		<integer-field
-			name="minLength"
+			name="min-length"
 			nullable="yes"/>
 
 		<integer-field
-			name="maxLength"
+			name="max-length"
 			nullable="yes"/>
 
 		<enum-field
 			name="charset"
-			type="messageTemplateTypeCharset"/>
+			type="message-template-type-charset"/>
 
 		<!-- statistics -->
 
 		<integer-field
-			name="numParameters"
+			name="num-parameters"
 			default="0"/>
 
 	</fields>
@@ -54,7 +54,7 @@
 	<collections>
 
 		<children-collection
-			type="messageTemplateParameter"/>
+			type="message-template-parameter"/>
 
 	</collections>
 

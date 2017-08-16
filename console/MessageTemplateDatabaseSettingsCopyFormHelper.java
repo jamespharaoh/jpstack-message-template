@@ -7,6 +7,7 @@ import com.google.common.base.Optional;
 import lombok.NonNull;
 
 import wbs.console.formaction.ConsoleFormActionHelper;
+import wbs.console.notice.ConsoleNotices;
 import wbs.console.request.ConsoleRequestContext;
 
 import wbs.framework.component.annotations.ClassSingletonDependency;
@@ -132,12 +133,18 @@ class MessageTemplateDatabaseSettingsCopyFormHelper
 
 			}
 
-			transaction.commit ();
+			ConsoleNotices notices =
+				new ConsoleNotices ();
 
-			requestContext.addNoticeFormat (
+			notices.noticeFormat (
 				"Message database types copied from %s.%s",
 				sourceDatabase.getSlice ().getCode (),
 				sourceDatabase.getCode ());
+
+			transaction.commit ();
+
+			requestContext.addNotices (
+				notices);
 
 			return optionalAbsent ();
 

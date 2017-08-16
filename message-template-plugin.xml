@@ -7,18 +7,21 @@
 	</plugin-dependencies>
 
 	<models>
-		<enum-type name="messageTemplateTypeCharset"/>
-		<model name="messageTemplateDatabase"/>
-		<model name="messageTemplateEntryType"/>
-		<model name="messageTemplateFieldType"/>
-		<model name="messageTemplateEntryValue"/>
-		<model name="messageTemplateFieldValue"/>
-		<model name="messageTemplateSet"/>
-		<model name="messageTemplateParameter"/>
+
+		<enum-type name="message-template-type-charset"/>
+
+		<model name="message-template-database"/>
+		<model name="message-template-entry-type"/>
+		<model name="message-template-entry-value"/>
+		<model name="message-template-field-type"/>
+		<model name="message-template-field-value"/>
+		<model name="message-template-parameter"/>
+		<model name="message-template-set"/>
+
 	</models>
 
 	<fixtures>
-		<fixture name="messageTemplate"/>
+		<fixture name="message-template"/>
 	</fixtures>
 
 	<layer name="api">
