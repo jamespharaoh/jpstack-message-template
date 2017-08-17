@@ -5,7 +5,7 @@ import static wbs.utils.string.StringUtils.hyphenToUnderscore;
 import static wbs.utils.string.StringUtils.joinWithFullStop;
 import static wbs.utils.string.StringUtils.stringFormat;
 import static wbs.utils.string.StringUtils.underscoreToHyphen;
-import static wbs.web.utils.JsonUtils.toJson;
+import static wbs.web.utils.JsonUtils.objectToJson;
 
 import com.google.common.base.Optional;
 import com.google.common.collect.ImmutableMap;
@@ -198,7 +198,7 @@ class MessageTemplateMessagesGetAction
 
 				.value (
 					(JsonObject)
-					toJson (
+					objectToJson (
 						successResponse))
 
 			);
